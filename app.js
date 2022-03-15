@@ -96,40 +96,9 @@ class Question {
 }
 
 class Quiz {
-  constructor() {
+  constructor(quesitionsAndAnswers) {
     this.parent = document.querySelector(".quiz-app .container");
-    this.quesitonsAndAnswers = [
-      {
-        question: "What's spoder name ?",
-        answers: ["Abdelillah", "Abdellah", "Abdillah", "Abdellilah"],
-        trueAnswer: "Abdelillah",
-      },
-      {
-        question: "Toxic ?",
-        answers: ["zaid", "sami", "gmr", "no one"],
-        trueAnswer: "zaid",
-      },
-      {
-        question: "Bot ?",
-        answers: ["pro bot", "AGB", "hayder", "dank memer"],
-        trueAnswer: "hayder",
-      },
-      {
-        question: "urarka ?",
-        answers: ["trash", "love", "bota", "zawjat hayder"],
-        trueAnswer: "trash",
-      },
-      {
-        question: "Hu Tao <3",
-        answers: ["love", "zawjat spoder", "bb", "monamor"],
-        trueAnswer: "zawjat spoder",
-      },
-      {
-        question: "hayder",
-        answers: ["164", "165", "169", "spoder"],
-        trueAnswer: "164",
-      },
-    ];
+    this.quesitonsAndAnswers = quesitionsAndAnswers;
     this.questionsCount = this.quesitonsAndAnswers.length;
     this.correct = 0;
     this.inCorrect = 0;
@@ -212,7 +181,48 @@ class Quiz {
   }
 }
 
-let quiz = new Quiz();
+let quiz = new Quiz([
+  {
+    question: "What's spoder name ?",
+    answers: ["Abdelillah", "Abdellah", "Abdillah", "Abdellilah"],
+    trueAnswer: "Abdelillah",
+  },
+  {
+    question: "Toxic ?",
+    answers: ["zaid", "sami", "gmr", "no one"],
+    trueAnswer: "zaid",
+  },
+  {
+    question: "Bot ?",
+    answers: ["pro bot", "AGB", "hayder", "dank memer"],
+    trueAnswer: "hayder",
+  },
+  {
+    question: "urarka ?",
+    answers: ["trash", "love", "bota", "zawjat hayder"],
+    trueAnswer: "trash",
+  },
+  {
+    question: "Hu Tao <3",
+    answers: ["love", "zawjat spoder", "bb", "monamor"],
+    trueAnswer: "zawjat spoder",
+  },
+  {
+    question: "hayder",
+    answers: ["164", "165", "169", "spoder"],
+    trueAnswer: "164",
+  },
+  {
+    question: "omk junz 13 hit omk l3atibi and that's in amongus law page ....",
+    answers: ["13", "14", "23", "24"],
+    trueAnswer: "24",
+  },
+  {
+    question: "The most requested game by Omar, gmr: ... taj rask",
+    answers: ["zelda", "mine", "ori", "The forest"],
+    trueAnswer: "zelda",
+  },
+]);
 
 // function
 quiz.generate();
